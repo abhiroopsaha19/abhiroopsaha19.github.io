@@ -17,17 +17,17 @@ h1, h2 {
 h2 {
    font-size: 8rem;
 }
-// @for $j from 0 through 6 {
-//    h1:nth-child(n + #{$j}), h2:nth-child(n + #{$j}) {
-//       transition: transform .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-//       transform: translate(-5px,-5px) scale(1);
-//       transform-origin: right center;
-//       &:hover {
-//          transform: translate(0px,0px) scale(0);
-//          transform-origin: center right;
-//       }
-//    }
-// }
+ @for $j from 0 through 6 {
+    h1:nth-child(n + #{$j}), h2:nth-child(n + #{$j}) {
+       transition: transform .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+       transform: translate(-5px,-5px) scale(1);
+       transform-origin: right center;
+       &:hover {
+          transform: translate(0px,0px) scale(0);
+          transform-origin: center right;
+       }
+    }
+ }
 @for $j from 0 through 5 {
    h1:nth-child(0n + #{$j}), h2:nth-child(5n + #{$j}) {
      animation-name: animateGlithcy;
@@ -89,3 +89,17 @@ h2 {
 		filter: hue-rotate(360deg);
 	}
 }
+#navbar {
+	overflow: hidden;
+	background-color: #333;
+  }
+  
+  #navbar a {
+	float: left;
+	display: block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+  }
